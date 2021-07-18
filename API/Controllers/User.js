@@ -93,10 +93,8 @@ exports.user_update_stats = (req,res) => {
     const q = q1+q2+q3+q4+q5+q6+q7+q8+q9;
     con.query(q,(error,result) => {
         if(error){
-            console.log("/")
             res.send(error);
         }else{
-            console.log("*")
             res.send(result);
         }
     })

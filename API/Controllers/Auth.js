@@ -42,7 +42,6 @@ exports.auth_signup = (req, res, next) => {
                                 const q3 = `insert into workout_stats values ('${email}',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);`;
                                 con.query(q3,(err,results2) => {
                                     if(err){
-                                        console.log(err);
                                         res.send({
                                             success:true,
                                             message:'failed to create user 555'
